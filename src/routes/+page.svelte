@@ -1,6 +1,7 @@
 <script>
 	import { fade, blur, slide, fly } from 'svelte/transition';
 	import '$lib/app.css';
+	import { custom } from './custom';
 
 	let ready = false;
 </script>
@@ -20,7 +21,7 @@
 
 {#if ready}
 	<!-- <h1 transition:slide>Welcome to SvelteKit</h1> -->
-	<h1 in:fly={{ y: 100 }} out:fade>Welcome to SvelteKit</h1>
+	<h1 transition:custom={{ delay: 2000 }}>Welcome to SvelteKit</h1>
 {/if}
 
 <style>
